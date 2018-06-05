@@ -13,9 +13,6 @@ function CountEMS()
 	PoliceConnected = 0
 	TaxiConnected = 0
 	MekConnected = 0
-	BilConnected = 0
-	MaklareConnected = 0
-	IcaConnected = 0
 	AirplanesConnected = 0
 	ElectrianConnected = 0
 	NapaValleyConnected = 0
@@ -58,7 +55,7 @@ ESX.RegisterServerCallback('stadusrp_getJobsOnline', function(source, cb)
 
   local xPlayer    = ESX.GetPlayerFromId(source)
   CountEMS()
-cb(EMSConnected, PoliceConnected, TaxiConnected, MekConnected, BilConnected, MaklareConnected, IcaConnected, AirplanesConnected, ElectrianConnected, NapaValleyConnected, BarConnected, PlayerConnected)
+cb(EMSConnected, PoliceConnected, TaxiConnected, MekConnected, AirplanesConnected, ElectrianConnected, NapaValleyConnected, BarConnected, PlayerConnected)
 
 end)
 
