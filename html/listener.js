@@ -9,10 +9,10 @@ $(function()
 		$('#police').html(event.data.police);
 		$('#taxi').html(event.data.taxi);
 		$('#mecano').html(event.data.mek);
-		$('#bil').html(event.data.bil);
-		$('#maklare').html(event.data.maklare);
-		$('#ica').html(event.data.ica);
-		$('#spelare').html(event.data.spelare);
+	    	$('#airlines').html(event.data.airlines);
+	        $('#electrician').html(event.data.electrician);
+	        $('#vigne').html(event.data.vigne);
+	        $('#epicerie').html(event.data.epicerie);
 	//	$('#ptbl').html(event.data.text);
 		
         buf.find('table').append("<tr class=\"heading\"><th>ID</th><th>Name</th></tr>");
