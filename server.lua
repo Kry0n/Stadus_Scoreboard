@@ -16,6 +16,10 @@ function CountEMS()
 	BilConnected = 0
 	MaklareConnected = 0
 	IcaConnected = 0
+	AirplanesConnected = 0
+	ElectrianConnected = 0
+	NapaValleyConnected = 0
+	BarConnected = 0
 	PlayerConnected = 0
 
 	for i=1, #xPlayers, 1 do
@@ -33,14 +37,17 @@ function CountEMS()
 		if xPlayer.job.name == 'mecano' then
 			MekConnected = MekConnected + 1
 		end
-		if xPlayer.job.name == 'cardealer' then
-			BilConnected = BilConnected + 1
+		if xPlayer.job.name == 'airlines' then
+			AirplanesConnected = AirplanesConnected + 1
 		end
-		if xPlayer.job.name == 'realestateagent' then
-			MaklareConnected = MaklareConnected + 1
-		end	
-		if xPlayer.job.name == 'forsaljare' then
-			IcaConnected = IcaConnected + 1
+		if xPlayer.job.name == 'electrician' then
+			ElectrianConnected = ElectrianConnected + 1
+		end
+		if xPlayer.job.name == 'vigne' then
+			NapaValleyConnected = NapaValleyConnected + 1
+		end
+		if xPlayer.job.name == 'epicerie' then
+			BarConnected = BarConnected + 1
 		end
 	end
 
@@ -51,7 +58,7 @@ ESX.RegisterServerCallback('stadusrp_getJobsOnline', function(source, cb)
 
   local xPlayer    = ESX.GetPlayerFromId(source)
   CountEMS()
-cb(EMSConnected, PoliceConnected, TaxiConnected, MekConnected, BilConnected, MaklareConnected, IcaConnected, PlayerConnected)
+cb(EMSConnected, PoliceConnected, TaxiConnected, MekConnected, BilConnected, MaklareConnected, IcaConnected, AirplanesConnected, ElectrianConnected, NapaValleyConnected, BarConnected, PlayerConnected)
 
 end)
 
