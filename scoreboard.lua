@@ -34,7 +34,7 @@ end
                     )
                 end
 				if Faketimer >= 2 then
-				ESX.TriggerServerCallback('stadusrp_getJobsOnline', function(ems, police, taxi, mek, bil, maklare, ica, spelare)
+				ESX.TriggerServerCallback('stadusrp_getJobsOnline', function(ems, police, taxi, mek, bil, maklare, ica, spelare, airlines, electrician, vigne, epicerie)
  myVar2 = ems
  myVar3 = police
  myVar4 = taxi
@@ -43,6 +43,12 @@ end
  myVar7 = maklare
  myVar8 = ica
  myVar9 = spelare
+ myVar10 = airlines
+ myVar11 = electrician
+-- Vigne = Napa Valley
+-- Epicerie = Bar
+ myVar12 = vigne
+ myVar13 = epicerie
 
           SendNUIMessage({ text = table.concat(players), 
 				  ems = myVar2,
@@ -52,7 +58,11 @@ end
   bil = myVar6,
   maklare = myVar7,
   ica = myVar8,
-  spelare = myVar9})
+  spelare = myVar9,
+  airlines = myVar10,
+  electrician = myVar11,
+  vigne = myVar12,
+  epicerie = myVar13})
 	end)
 	Faketimer = 0
 	else
